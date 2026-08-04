@@ -1,21 +1,21 @@
-# Linux Audit Toolkit
-
-Toolkit ligero para auditoría rápida de sistemas Linux. Ideal para levantamiento de inventario y hardening inicial.
+# Linux Audit Toolkit 🛡️
+Toolkit ligero de auditoría para Linux hecho en Bash. Ideal para sysadmins y pentesters que quieren checar rápido la postura de seguridad de un servidor.
 
 ## 🚀 Scripts incluidos
 
-### recon-basico.sh
-Script de inventario rápido para auditoría.
+### 1. recon-basico.sh ✅
+Recolecta info del sistema: usuario, hostname, IP, SO, espacio en disco.
 
-Recolecta:
-- Hostname, usuario, kernel, distro
-- CPU, RAM, discos
-- Interfaces de red y puertos abiertos
-- Usuarios, grupos, sudoers
-- Servicios activos
-- Procesos relevantes
+### 2. audit-usuarios.sh ✅
+Audita usuarios con UID 0, shells de login y configuración básica de SSH.
 
-## 📦 Uso
-```bash
-chmod +x recon-basico.sh
-./recon-basico.sh
+## 🛣️ Roadmap
+- [x] recon-basico.sh
+- [x] audit-usuarios.sh
+- [ ] audit-permisos.sh (archivos SUID, /tmp world-writable)
+- [ ] audit-red.sh (puertos abiertos, reglas firewall)
+- [ ] Generar reporte final en.txt
+
+## 👨‍💻 Autor
+Sam Esparza - Técnico en Ciberseguridad
+GitHub: @samkali36
