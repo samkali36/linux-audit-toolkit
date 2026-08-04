@@ -8,11 +8,12 @@ Recolecta info del sistema: usuario, hostname, IP, SO, espacio en disco.
 
 ### 2. audit-usuarios.sh ✅
 Audita usuarios con UID 0, shells de login y configuración básica de SSH.
-
+### 3. audit-permisos.sh ✅
+Busca binarios SUID y archivos world-writable que pueden usarse para escalar privilegios.
 ## 🛣️ Roadmap
 - [x] recon-basico.sh
 - [x] audit-usuarios.sh
-- [ ] audit-permisos.sh (archivos SUID, /tmp world-writable)
+- [x] audit-permisos.sh (archivos SUID, /tmp world-writable)
 - [ ] audit-red.sh (puertos abiertos, reglas firewall)
 - [ ] Generar reporte final en.txt
 
