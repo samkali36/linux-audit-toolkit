@@ -1,26 +1,14 @@
-# Linux Audit Toolkit 🛡️
-Toolkit ligero de auditoría para Linux hecho en Bash. Ideal para sysadmins y pentesters que quieren checar rápido la postura de seguridad de un servidor.
+# Linux Audit Toolkit - Daily SOC Routine
 
-## 🚀 Scripts incluidos
+Rutina diaria de auditoria en Kali Linux WSL.
 
-### 1. recon-basico.sh ✅
-Recolecta info del sistema: usuario, hostname, IP, SO, espacio en disco.
+## Que hace?
+- daily.sh automatiza la recoleccion de evidencias
+- Guarda IPs, puertos, SUID cada dia en /reportes/
+- Documentado con IA para portafolio
 
-### 2. audit-usuarios.sh ✅
-Audita usuarios con UID 0, shells de login y configuración básica de SSH.
-### 3. audit-permisos.sh ✅
-### 4. audit-red.sh ✅
-### 5. reporte-final.sh ✅
-Genera reporte-auditoria-YYYYMMDD-HHMM.txt que ejecuta los 4 audits y los guarda en un solo archivo.
-Audita interfaces de red, puertos abiertos (ss), conexiones y reglas de firewall (ufw/iptables/firewalld).
-Busca binarios SUID y archivos world-writable que pueden usarse para escalar privilegios.
-## 🛣️ Roadmap
-- [x] recon-basico.sh
-- [x] audit-usuarios.sh
-- [x] audit-permisos.sh (archivos SUID, /tmp world-writable)
-- [x] audit-red.sh (puertos abiertos, reglas firewall)
-- [x] Generar reporte final en.txt
+## Uso diario
+./daily.sh
+git add . && git commit -m "reporte" && git push
 
-## 👨‍💻 Autor
-Sam Esparza - Técnico en Ciberseguridad
-GitHub: @samkali36
+Autor: Samuel Esparza - Monterrey MX - SOC Analyst Jr
