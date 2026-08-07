@@ -1,0 +1,74 @@
+==========================================
+ LINUX AUDIT TOOLKIT - REPORTE FINAL
+ Fecha: Tue Aug  4 12:35:09 PM CST 2026
+ Host: ICV-IDSAM
+ Usuario: samuel
+==========================================
+
+--- 1. RECON BASICO ---
+[+] Host: ICV-IDSAM
+[+] IP: 10.255.255.254/32
+172.24.121.246/20
+172.17.0.1/16
+
+[+] Usuarios conectados:
+ 12:35:09 up  1:37,  1 user,  load average: 0.05, 0.05, 0.05
+USER     TTY      FROM             LOGIN@   IDLE   JCPU   PCPU  WHAT
+samuel   pts/1    -                10:57    1:37m  0.02s  0.02s -bash
+
+[+] Puertos abiertos:
+Netid State  Recv-Q Send-Q  Local Address:Port  Peer Address:Port
+udp   UNCONN 0      0      10.255.255.254:53         0.0.0.0:*
+udp   UNCONN 0      0           127.0.0.1:323        0.0.0.0:*
+udp   UNCONN 0      0               [::1]:323           [::]:*
+tcp   LISTEN 0      4096        127.0.0.1:36823      0.0.0.0:*
+tcp   LISTEN 0      1000   10.255.255.254:53         0.0.0.0:*
+
+[+] Espacio en disco:
+Filesystem      Size  Used Avail Use% Mounted on
+none            3.8G     0  3.8G   0% /usr/lib/modules/6.18.33.2-microsoft-standard-WSL2
+none            3.8G  4.0K  3.8G   1% /mnt/wsl
+drivers         475G  111G  365G  24% /usr/lib/wsl/drivers
+/dev/sdd       1007G  9.1G  947G   1% /
+none            3.8G  156K  3.8G   1% /mnt/wslg
+none            3.8G     0  3.8G   0% /usr/lib/wsl/lib
+rootfs          3.8G  2.8M  3.8G   1% /init
+none            3.8G     0  3.8G   0% /dev
+none            3.8G  836K  3.8G   1% /run
+none            3.8G     0  3.8G   0% /run/lock
+none            3.8G     0  3.8G   0% /run/shm
+none            3.8G   80K  3.8G   1% /mnt/wslg/versions.txt
+none            3.8G   80K  3.8G   1% /mnt/wslg/doc
+C:\             475G  111G  365G  24% /mnt/c
+none            1.0M     0  1.0M   0% /run/credentials/systemd-journald.service
+none            1.0M     0  1.0M   0% /run/credentials/getty@tty1.service
+tmpfs           772M   92K  772M   1% /run/user/1000
+
+[+] Últimos logins:
+
+--- 2. AUDITORIA USUARIOS ---
+===== AUDITORIA DE USUARIOS Y SSH =====
+Fecha: Tue Aug  4 12:35:09 PM CST 2026
+Hostname: ICV-IDSAM
+
+[*] Usuarios con UID 0 (deberia ser solo root):
+root
+
+[*] Usuarios con shell de login:
+root:/bin/bash
+sync:/bin/sync
+samuel:/bin/bash
+postgres:/bin/bash
+
+[*] Config SSH /etc/ssh/sshd_config:
+
+[*] Ultimos logins (who):
+samuel   pts/1        2026-08-04 10:57
+
+===== FIN AUDITORIA =====
+
+--- 3. AUDITORIA PERMISOS ---
+===== AUDITORIA DE PERMISOS PELIGROSOS =====
+Fecha: Tue Aug  4 12:35:09 PM CST 2026
+
+[*] Archivos SUID (pueden escalar privilegios):
